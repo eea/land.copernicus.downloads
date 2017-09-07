@@ -1,0 +1,6 @@
+[report]
+include =
+    src/land/*
+omit =
+    */test*
+    */upgrades/*

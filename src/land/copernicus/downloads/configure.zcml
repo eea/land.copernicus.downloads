@@ -1,0 +1,6 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <includeDependencies package="." />
+  <include file="profiles.zcml" />
+
+</configure>
