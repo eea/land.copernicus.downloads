@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
 from plone import api
-from land.copernicus.downloads.testing import LAND_COPERNICUS_DOWNLOADS_INTEGRATION_TESTING  # noqa
+from land.copernicus.downloads.tests.base import FUNCTIONAL_TESTING
 
 import unittest
 
@@ -9,7 +9,7 @@ import unittest
 class TestSetup(unittest.TestCase):
     """Test that land.copernicus.downloads is properly installed."""
 
-    layer = LAND_COPERNICUS_DOWNLOADS_INTEGRATION_TESTING
+    layer = FUNCTIONAL_TESTING
 
     def setUp(self):
         """Custom shared utility setup for tests."""
@@ -31,7 +31,7 @@ class TestSetup(unittest.TestCase):
 
 class TestUninstall(unittest.TestCase):
 
-    layer = LAND_COPERNICUS_DOWNLOADS_INTEGRATION_TESTING
+    layer = FUNCTIONAL_TESTING
 
     def setUp(self):
         self.portal = self.layer['portal']
