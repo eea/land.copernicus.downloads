@@ -6,7 +6,16 @@
 land.copernicus.downloads
 ==============================================================================
 
-Tell me what your product does
+Expose a FTP path. Track downloads using eea.googletracker.
+
+eea.googletracker should not be installed in the portal, unless you need to
+enable its `at_download` tracking functionality.
+
+Example config (FS mounted at /Plone/files):
+
+* go to https://website/Plone/files/manage_access and grant "FTP Access" to "Member"
+* instruct user to access ftp://website/Plone/files
+
 
 Features
 --------

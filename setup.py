@@ -42,6 +42,7 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'setuptools',
         'eea.downloads',
+        'eea.googletracker',
     ],
     extras_require={
         'test': [
