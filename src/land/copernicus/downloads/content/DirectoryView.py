@@ -41,10 +41,11 @@ class TrackDownload(track_download.TrackDownload):
         return 'FTP File'
 
     def get_remote_ip(self):
-        # TODO: Verify this finds the correct client IP!
-        ip = super(TrackDownload, self).get_remote_ip()
-        track_download.logger.info('IP: %s', ip)
-        return ip
+        try:
+            return self.context.REQUEST.environ['REMOTE_ADDR']
+        except:
+            track_download._log('get_remote_ip')
+            return '0.0.0.0'
 
 
 class PatchedFSFile(FSFile):
